@@ -6,20 +6,71 @@
   <title>BrowserKit - Browser Productivity Tools</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #1a1a1a; }
-    .hero { max-width: 600px; margin: 80px auto; padding: 0 20px; text-align: center; }
-    h1 { font-size: 28px; margin-bottom: 12px; }
-    p { font-size: 16px; color: #555; line-height: 1.6; margin-bottom: 24px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #1a1a1a; line-height: 1.7; }
+    .container { max-width: 680px; margin: 0 auto; padding: 40px 20px; }
+    h1 { font-size: 28px; margin-bottom: 8px; }
+    h2 { font-size: 20px; margin-top: 40px; margin-bottom: 12px; }
+    h3 { font-size: 16px; margin-top: 24px; margin-bottom: 8px; }
+    p { font-size: 15px; color: #444; margin-bottom: 16px; }
     a { color: #1a73e8; }
-    .contact { margin-top: 40px; font-size: 14px; color: #888; }
+    .subtitle { color: #888; font-size: 15px; margin-bottom: 32px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #eee; font-size: 14px; }
+    th { font-weight: 600; background: #f8f9fa; }
+    .price { font-size: 24px; font-weight: 700; color: #1a73e8; }
+    .section { margin-top: 40px; padding-top: 32px; border-top: 1px solid #eee; }
+    footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #eee; font-size: 13px; color: #999; }
   </style>
 </head>
 <body>
-  <div class="hero">
+  <div class="container">
     <h1>BrowserKit</h1>
-    <p>Browser productivity tools and Chrome extensions.</p>
-    <p>Our first product, <strong>Tab Rotator Pro</strong>, automatically rotates through your open tabs for dashboards, signage, and monitoring.</p>
-    <p class="contact">Contact: enmit@protonmail.com</p>
+    <p class="subtitle">Browser productivity tools and Chrome extensions.</p>
+
+    <h2>Tab Rotator Pro</h2>
+    <p>Automatically rotate through your open tabs. Built for dashboards, digital signage, kiosks, and monitoring screens.</p>
+    <p>A modern replacement for Revolver Tabs (200K+ users) and Tab Rotate (30K+ users), both discontinued after Chrome's MV3 transition.</p>
+
+    <h3>Features</h3>
+    <ul>
+      <li>Reliable tab rotation with accurate timers (2s to 60min)</li>
+      <li>Live countdown progress bar</li>
+      <li>Auto-reload tabs on switch</li>
+      <li>Per-window independent rotation (Pro)</li>
+      <li>Unlimited tabs (Pro)</li>
+    </ul>
+
+    <h3>Pricing</h3>
+    <table>
+      <tr><th>Plan</th><th>Price</th><th>Includes</th></tr>
+      <tr><td>Free</td><td>$0</td><td>Up to 4 tabs, 1 window, all core features</td></tr>
+      <tr><td>Pro Monthly</td><td class="price">$4/mo</td><td>Unlimited tabs, multi-window, priority support</td></tr>
+      <tr><td>Pro Yearly</td><td class="price">$29/yr</td><td>Same as Pro Monthly (save 40%)</td></tr>
+    </table>
+    <p>Payments are processed securely by <a href="https://stripe.com">Stripe</a> via <a href="https://extensionpay.com">ExtensionPay</a>.</p>
+
+    <div class="section">
+      <h2>Refund Policy</h2>
+      <p>If you're not satisfied with Tab Rotator Pro, contact us within <strong>30 days</strong> of purchase for a full refund. No questions asked.</p>
+      <p>To request a refund, email <a href="mailto:enmit@protonmail.com">enmit@protonmail.com</a> with your payment email address.</p>
+    </div>
+
+    <div class="section">
+      <h2>Privacy</h2>
+      <p>Tab Rotator Pro does not collect, store, or transmit any personal data. Your browsing activity stays on your device. Settings are stored locally via Chrome Sync.</p>
+      <p>Read our full <a href="privacy-policy.html">Privacy Policy</a>.</p>
+    </div>
+
+    <div class="section">
+      <h2>Terms of Service</h2>
+      <p>By purchasing a Pro plan, you agree to a recurring subscription billed monthly or yearly depending on your chosen plan. You may cancel at any time — your Pro features will remain active until the end of the current billing period.</p>
+      <p>We reserve the right to modify pricing with 30 days notice to existing subscribers.</p>
+    </div>
+
+    <footer>
+      <p>BrowserKit &mdash; <a href="mailto:enmit@protonmail.com">enmit@protonmail.com</a></p>
+      <p><a href="privacy-policy.html">Privacy Policy</a></p>
+    </footer>
   </div>
 </body>
 </html>
