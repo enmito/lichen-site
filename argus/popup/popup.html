@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Argus</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Argus</h1>
+    <button id="btn-settings" title="Settings">⚙</button>
+  </div>
+
+  <!-- Monitor list -->
+  <div id="view-monitors">
+    <div id="monitor-list"></div>
+    <button id="btn-add" class="btn-primary">+ Add Monitor</button>
+  </div>
+
+  <!-- Add / edit monitor form -->
+  <div id="view-form" class="hidden">
+    <h2 id="form-title">New Monitor</h2>
+    <label>
+      Name
+      <input id="field-name" type="text" placeholder="My Monitor">
+    </label>
+    <label>
+      URL
+      <input id="field-url" type="url" placeholder="https://example.com">
+    </label>
+    <label>
+      CSS Selector
+      <div class="selector-row">
+        <input id="field-selector" type="text" placeholder=".price">
+        <button id="btn-pick" title="Pick element on page">🎯</button>
+      </div>
+    </label>
+    <label>
+      Check every (minutes)
+      <input id="field-interval" type="number" min="1" max="1440" value="30">
+    </label>
+    <div class="form-buttons">
+      <button id="btn-save" class="btn-primary">Save</button>
+      <button id="btn-cancel">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Settings panel -->
+  <div id="view-settings" class="hidden">
+    <h2>Settings</h2>
+    <label class="checkbox-row">
+      <input id="setting-browser-notif" type="checkbox">
+      Browser notifications
+    </label>
+    <label class="checkbox-row">
+      <input id="setting-discord" type="checkbox">
+      Discord Webhook
+    </label>
+    <label id="webhook-url-row" class="hidden">
+      Webhook URL
+      <input id="setting-webhook-url" type="url" placeholder="https://discord.com/api/webhooks/…">
+    </label>
+    <div class="form-buttons">
+      <button id="btn-save-settings" class="btn-primary">Save</button>
+      <button id="btn-cancel-settings">Cancel</button>
+    </div>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

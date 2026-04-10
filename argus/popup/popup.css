@@ -1,0 +1,133 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 13px;
+  color: #1a1a1a;
+  width: 320px;
+  min-height: 200px;
+  padding: 0;
+  background: #fff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.header h1 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #5865F2;
+}
+
+#view-monitors,
+#view-form,
+#view-settings {
+  padding: 12px 14px;
+}
+
+.hidden { display: none !important; }
+
+h2 {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="url"],
+input[type="number"] {
+  display: block;
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+input:focus {
+  outline: 2px solid #5865F2;
+  border-color: transparent;
+}
+
+.selector-row {
+  display: flex;
+  gap: 6px;
+}
+
+.selector-row input { flex: 1; }
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  background: #5865F2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 7px 14px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.btn-primary:hover { background: #4752c4; }
+
+button {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+button:hover { background: #f5f5f5; }
+
+/* Monitor list items */
+.monitor-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.monitor-info { flex: 1; overflow: hidden; }
+.monitor-name { font-weight: 600; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.monitor-url { font-size: 11px; color: #888; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.monitor-actions { display: flex; gap: 4px; }
+.monitor-actions button { padding: 4px 8px; font-size: 11px; }
+
+#btn-add { margin-top: 10px; width: 100%; }
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.status-dot.active { background: #4caf50; }
+.status-dot.inactive { background: #bbb; }
