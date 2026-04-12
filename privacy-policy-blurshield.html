@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlurShield — Privacy Policy</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 640px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.7; }
+    h1 { font-size: 22px; margin-bottom: 8px; }
+    h2 { font-size: 16px; margin-top: 24px; }
+    .date { color: #888; font-size: 14px; margin-bottom: 24px; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy — BlurShield</h1>
+  <p class="date">Last updated: April 12, 2026</p>
+
+  <h2>Summary</h2>
+  <p>BlurShield processes everything locally on your device. We do not collect, store, or transmit any personal data or page content. Your browsing activity stays on your device.</p>
+
+  <h2>Data Collection</h2>
+  <p>This extension does <strong>not</strong> collect:</p>
+  <ul>
+    <li>Page content, text, or screenshots</li>
+    <li>Browsing history or URLs visited</li>
+    <li>Personal information (emails, phone numbers, etc.)</li>
+    <li>Analytics, telemetry, or usage data</li>
+    <li>Cookies or tracking identifiers</li>
+  </ul>
+
+  <h2>Auto-Detect Feature (Pro)</h2>
+  <p>The auto-detect feature scans page text using regular expressions to identify sensitive patterns (emails, phone numbers, API keys, etc.). This processing happens <strong>entirely within your browser</strong>. No page content is ever sent to any server. The extension only applies CSS blur filters to matching elements — it does not read, copy, or store the detected text.</p>
+
+  <h2>Blur Save Feature (Pro)</h2>
+  <p>When you save blur configurations, the extension stores <strong>only CSS selectors and coordinates</strong> (e.g., "div > p:nth-of-type(2)" or "{x: 100, y: 200}") via <code>chrome.storage.sync</code>. The actual text content behind the blur is <strong>never saved</strong>. This data syncs across your Chrome devices via your Google account.</p>
+
+  <h2>Permissions</h2>
+  <p>The extension requests the following permissions, used solely for core functionality:</p>
+  <ul>
+    <li><strong>activeTab</strong> — to inject blur functionality into the current tab when you activate BlurShield</li>
+    <li><strong>storage</strong> — to save your settings and blur configurations locally</li>
+    <li><strong>scripting</strong> — to inject the content script on demand</li>
+  </ul>
+  <p>BlurShield does <strong>not</strong> request access to all websites. It only operates on the tab you explicitly activate it on.</p>
+
+  <h2>Payment Processing</h2>
+  <p>Pro plan payments are processed by <a href="https://extensionpay.com">ExtensionPay</a> and <a href="https://stripe.com">Stripe</a>. Payment information is handled entirely by these third-party services and is never accessible to this extension. See their respective privacy policies for details.</p>
+
+  <h2>Third-Party Services</h2>
+  <p>The extension communicates with <code>extensionpay.com</code> solely to verify Pro plan subscription status. No browsing data or page content is sent.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the updated version will be posted here with a new date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions? Email <a href="mailto:lichen_dev@proton.me">lichen_dev@proton.me</a>.</p>
+</body>
+</html>
