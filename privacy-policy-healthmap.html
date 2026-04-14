@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthMap — Privacy Policy</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 640px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.7; }
+    h1 { font-size: 22px; margin-bottom: 8px; }
+    h2 { font-size: 16px; margin-top: 24px; }
+    .date { color: #888; font-size: 14px; margin-bottom: 24px; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy — HealthMap for Confluence</h1>
+  <p class="date">Last updated: April 15, 2026</p>
+
+  <h2>Summary</h2>
+  <p>HealthMap is built on Atlassian Forge and runs entirely within Atlassian's infrastructure. Your data never leaves Atlassian — we have no external servers, collect no analytics, and store no personal information outside of your Confluence instance.</p>
+
+  <h2>Data Collection</h2>
+  <p>This app does <strong>not</strong> collect:</p>
+  <ul>
+    <li>Personal information or user profiles</li>
+    <li>Analytics, telemetry, or usage tracking</li>
+    <li>Cookies or tracking identifiers</li>
+    <li>Page content (only metadata such as titles, dates, and links are processed)</li>
+  </ul>
+
+  <h2>Data Storage</h2>
+  <p>HealthMap stores the following data using Atlassian Forge Storage (key-value store), which resides within your Atlassian cloud instance:</p>
+  <ul>
+    <li><strong>Scan results</strong> — health scores, issue counts, and timestamps per space</li>
+    <li><strong>Scan history</strong> — up to 52 weekly snapshots per space for trend tracking</li>
+    <li><strong>Score configuration</strong> — custom weights and grade thresholds set by administrators</li>
+    <li><strong>Hidden spaces list</strong> — space IDs that administrators choose to exclude</li>
+  </ul>
+  <p>No data is sent to external servers. All storage is managed by Atlassian's Forge platform.</p>
+
+  <h2>Permissions (Scopes)</h2>
+  <p>The app requests the following Atlassian scopes, used solely for core functionality:</p>
+  <ul>
+    <li><strong>read:page:confluence</strong> — to read page metadata (titles, dates, parent IDs) for health analysis</li>
+    <li><strong>read:space:confluence</strong> — to list spaces for scanning</li>
+    <li><strong>read:confluence-content.all</strong> — to read page body content for broken link detection</li>
+    <li><strong>write:confluence-content</strong> — to add "needs-review" labels to stale pages</li>
+    <li><strong>storage:app</strong> — to persist scan results and configuration in Forge Storage</li>
+    <li><strong>read:user:confluence</strong> — to check user account status for orphan detection (Pro)</li>
+  </ul>
+
+  <h2>Third-Party Services</h2>
+  <p>HealthMap does not communicate with any third-party services. The app runs entirely on the Atlassian Forge platform and qualifies for the <a href="https://www.atlassian.com/trust/runs-on-atlassian">"Runs on Atlassian"</a> program.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the updated version will be posted here with a new date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions? Email <a href="mailto:lichen_dev@proton.me">lichen_dev@proton.me</a>.</p>
+</body>
+</html>
