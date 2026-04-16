@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silo — Guide</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #1a1a1a; line-height: 1.7; }
+    .container { max-width: 680px; margin: 0 auto; padding: 40px 20px; }
+    .back-link { font-size: 14px; color: #1a73e8; text-decoration: none; display: inline-block; margin-bottom: 32px; }
+    .back-link:hover { text-decoration: underline; }
+    h1 { font-size: 28px; margin-bottom: 8px; }
+    h2 { font-size: 20px; margin-top: 40px; margin-bottom: 12px; padding-top: 32px; border-top: 1px solid #eee; }
+    h2:first-of-type { border-top: none; padding-top: 0; margin-top: 32px; }
+    p { font-size: 15px; color: #444; margin-bottom: 16px; }
+    ol { margin-bottom: 16px; padding-left: 20px; }
+    ul { margin-bottom: 16px; padding-left: 20px; }
+    li { font-size: 14px; color: #444; margin-bottom: 6px; }
+    a { color: #1a73e8; }
+    .subtitle { color: #888; font-size: 15px; margin-bottom: 32px; }
+    details { border: 1px solid #eee; border-radius: 6px; margin-bottom: 10px; }
+    details summary {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1a1a1a;
+      padding: 14px 16px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::before {
+      content: "▶";
+      font-size: 10px;
+      color: #888;
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+    details[open] summary::before { transform: rotate(90deg); }
+    details[open] summary { border-bottom: 1px solid #eee; }
+    .details-body { padding: 14px 16px; font-size: 14px; color: #444; }
+    footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #eee; font-size: 13px; color: #999; }
+    footer a { color: #1a73e8; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="../../index.html" class="back-link">&larr; Back to Lichen</a>
+
+    <h1>Silo &mdash; Guide</h1>
+    <p class="subtitle">Local Tab Manager</p>
+
+    <h2>Getting Started</h2>
+    <ol>
+      <li>Install Silo from the Chrome Web Store</li>
+      <li>Click the Silo icon in your toolbar</li>
+      <li>Click &ldquo;+ New Collection&rdquo; to save your tabs</li>
+      <li>Choose &ldquo;All tabs in window&rdquo; or &ldquo;Current tab only&rdquo;</li>
+      <li>Give your collection a name, pick a color, and click Save</li>
+      <li>To restore, expand a collection and click &ldquo;Open All&rdquo;</li>
+    </ol>
+
+    <h2>Managing Collections</h2>
+    <ul>
+      <li><strong>Color labels</strong>: 8 colors to categorize your collections</li>
+      <li><strong>Search</strong>: Type in the search bar to filter by collection name, tab title, or URL</li>
+      <li><strong>Reorder</strong>: Use &#9650;&#9660; buttons or drag &amp; drop to rearrange collections</li>
+      <li><strong>Rename</strong>: Hover over a collection and click the pencil icon</li>
+      <li><strong>Delete</strong>: Hover over a collection and click the trash icon (confirmation required)</li>
+      <li><strong>Add current tab</strong>: Click the + button on any collection row to add the page you&rsquo;re viewing</li>
+    </ul>
+
+    <h2>Working with Tabs</h2>
+    <ul>
+      <li><strong>Open a single tab</strong>: Click any tab title to open it in a new tab</li>
+      <li><strong>Remove a tab</strong>: Hover over a tab and click &#x2715;</li>
+      <li><strong>Duplicate detection</strong>: Adding a tab that already exists in a collection will show a warning</li>
+    </ul>
+
+    <h2>Export &amp; Import</h2>
+    <ul>
+      <li><strong>Export</strong>: Click &ldquo;Export JSON&rdquo; to download all your collections as a JSON file</li>
+      <li><strong>Import</strong>: Click &ldquo;Import JSON&rdquo; to load collections from a previously exported file</li>
+      <li>Importing adds to your existing data &mdash; it does not overwrite</li>
+      <li>Use this to transfer collections between computers or as a manual backup</li>
+    </ul>
+
+    <h2>Pro Features ($9 one-time)</h2>
+    <ul>
+      <li><strong>Unlimited collections</strong>: Free plan allows 5, Pro removes the limit</li>
+      <li><strong>Tab group sync</strong>: &ldquo;Open All&rdquo; creates a Chrome tab group with your collection&rsquo;s name and color</li>
+      <li><strong>Keyboard shortcut</strong>: Alt+Shift+S to quick-save all tabs. Customize at chrome://extensions/shortcuts</li>
+      <li><strong>Auto backup</strong>: Toggle in the popup (Pro section) for automatic JSON backup every 24 hours</li>
+    </ul>
+
+    <h2>FAQ</h2>
+
+    <details>
+      <summary>Where is my data stored?</summary>
+      <div class="details-body">Everything is stored locally in your browser&rsquo;s IndexedDB. No servers, no cloud, no account needed.</div>
+    </details>
+
+    <details>
+      <summary>Can I sync across devices?</summary>
+      <div class="details-body">Silo is intentionally local-only. Use Export/Import to manually transfer collections.</div>
+    </details>
+
+    <details>
+      <summary>What happens if I uninstall?</summary>
+      <div class="details-body">Your data will be deleted. Export your collections first as a backup.</div>
+    </details>
+
+    <details>
+      <summary>How do I change the keyboard shortcut?</summary>
+      <div class="details-body">Go to chrome://extensions/shortcuts in your browser and find Silo.</div>
+    </details>
+
+    <details>
+      <summary>How do I get Pro?</summary>
+      <div class="details-body">Click the &ldquo;Upgrade &mdash; $9&rdquo; button in the popup. It&rsquo;s a one-time payment, no subscription.</div>
+    </details>
+
+    <h2>Contact</h2>
+    <p>Questions or feedback? Email <a href="mailto:lichen_dev@proton.me">lichen_dev@proton.me</a></p>
+
+    <footer>
+      <p>Lichen &mdash; <a href="mailto:lichen_dev@proton.me">lichen_dev@proton.me</a> &middot; <a href="../../index.html">Back to lichen.dev</a></p>
+    </footer>
+  </div>
+</body>
+</html>
